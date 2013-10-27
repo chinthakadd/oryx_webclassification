@@ -1,0 +1,7 @@
+<oryx>
+	<list>
+		  {% for doc in urllist %}
+            <url>{{doc}}</url>
+          {% end %}
+	</list>
+</oryx>

@@ -1,0 +1,76 @@
+<oryx>
+	<list>
+		<url>
+			<title>Engadget</title>
+			<link>http://www.engadget.com</link>
+			<favLocal>favs/engadget.ico</favLocal>
+			<favUrl>http://www.blogsmithmedia.com/www.engadget.com/media/favicon.ico
+			</favUrl>
+		</url>
+		<url>
+			<title>The Verge</title>
+			<link>http://www.theverge.com</link>
+			<favLocal>favs/theverge.ico</favLocal>
+			<favUrl>http://cdn2.sbnation.com/images/verge/favicon.vc44a54f.ico
+			</favUrl>
+		</url>
+		<url>
+			<title>The Next Web - International technology news, business &amp;
+				culture</title>
+			<link>http://thenextweb.com</link>
+			<favLocal>favs/thenextweb.ico</favLocal>
+			<favUrl>http://thenextweb.com/favicon.ico</favUrl>
+		</url>
+		<url>
+			<title>TechCrunch - The latest technology news and information on
+				startups</title>
+			<link>http://techcrunch.com</link>
+			<favLocal>favs/techcrunch.ico</favLocal>
+			<favUrl>http://s1.wp.com/wp-content/themes/vip/techcrunch-2013/assets/images/favicon.ico?m=1381204869g
+			</favUrl>
+		</url>
+		<url>
+			<title>
+				GigaOM
+			</title>
+			<link>http://gigaom.com</link>
+			<favLocal />
+			<favUrl />
+		</url>
+		<url>
+			<title>9to5Mac: Apple iPhone, Mac and iPad News Breaking All Day
+			</title>
+			<link>http://9to5mac.com</link>
+			<favLocal>favs/9to5mac.ico</favLocal>
+			<favUrl>http://1.gravatar.com/blavatar/f6a01bb5de90201e543fc0be7e167b5b?s=16
+			</favUrl>
+		</url>
+		<url>
+			<title>AnandTech | Home</title>
+			<link>http://anandtech.com</link>
+			<favLocal />
+			<favUrl>/favicon.ico</favUrl>
+		</url>
+		<url>
+			<title>Mashable</title>
+			<link>http://mashable.com</link>
+			<favLocal />
+			<favUrl />
+		</url>
+		<url>
+			<title>Mac Rumors: Apple Mac iOS Rumors and News You Care About
+			</title>
+			<link>http://www.macrumors.com</link>
+			<favLocal>favs/macrumors.ico</favLocal>
+			<favUrl>http://cdn.macrumors.com/images-new/favicon.ico</favUrl>
+		</url>
+		<url>
+			<title>BGR | Mobile and tech news, reviews, opinions and insights
+			</title>
+			<link>http://bgr.com</link>
+			<favLocal>favs/bgr.ico</favLocal>
+			<favUrl>http://0.gravatar.com/blavatar/0ad9afec64a3bb55ff458880251c1e21?s=16
+			</favUrl>
+		</url>
+	</list>
+</oryx>

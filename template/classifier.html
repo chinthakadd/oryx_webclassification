@@ -1,0 +1,115 @@
+<html>
+  <head>
+	<link rel="stylesheet" href="{{ static_url("main.css") }}" type="text/css"/>
+	<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+    <title>OryX Classification</title>
+  </head>
+  <body>
+  
+  <div class="mainC">
+  <div class="login">
+	<img src="{{ static_url("user-icon.png") }}" align="left"/>
+	  <p><a href="/login">log in</a></p>
+	</div>
+	<div class="header">
+		<p><span>OryX </span> Web Classification Dashboard</p>
+	</div>
+	
+	<form name="input" action="/" method="post" id="searchform">
+	<div class="tip">
+		<p>Enter URL</p>
+	</div>
+	<div class="searchBox">
+		<input type="text" name="search" value="{{ searchURL}}">
+	</div>
+	<div class="searchBtn">
+	  <p><a href="#" onclick="document.getElementById('searchform').submit();">C H E C K</a></p>
+	</div>
+	</form>
+	
+	{% if urldoc is not None %}
+	<div class="tip">
+		<p>Results for :- {{ urldoc.url }} (From Classification Database)</p>
+	</div>
+	<div class="container">
+	
+	<div class="list">
+
+     <p>Type      :- <span>{{ urldoc.classification }}</span></p>
+	 <p>Main Tag:- <span>{{ urldoc.maintag }}</span></p>
+	  </div>
+	  </div>
+	  {% elif urldoc is None and items is None%}
+	  <div class="tip">
+		<p>Error while processing your input URL. Check again</p>
+		</div>
+	  {% end %}
+	  
+	  {% if model is not None %}
+		
+		<div class="tip">
+		<p>Results for :- {{ urldoc.url }} (From Classification Model)</p>
+		</div>
+	
+		<div class="container">
+	
+		<div class="list">
+
+			<p>Type      :- <span>{{ model.type }}</span></p>
+			<p>Confidence:- <span>{{ model.prob }}</span></p>
+		</div>
+		</div>
+	   {% end %}
+	
+	{% if items is not None %}
+	<div class="tip">
+		{% if bc == "" %}
+          <p>See our web site classifications</p>
+		{% else %}
+			<p> 
+			<span class="bc"><a href="/" >Home</a></span>
+			{% set bbc = "" %}
+			{% for i in bc.split(",") %}
+				{% set bbc = i if bbc == "" else bbc+","+i %}
+				<span class="bc"><a href="?type={{bbc}}" >{{ i }}</a></span>
+			{% end %}
+			</p>
+		  {% end %}
+		
+	</div>
+	{% else %}
+	<div class="login">
+	<img src="{{ static_url("home_icon.png") }}" align="left"/>
+	  <p><a href="/">HOME</a></p>
+	</div>	
+	{% end %}
+	
+	{% if items is not None %}
+	<div class="container">
+	
+		{% if len(items) == 0 %}
+			<div class="list">
+			<p>No URLs for the classification</p>
+			</div>
+		{% end %}
+		
+	<div class="list">
+      {% for item in items %}
+
+		{% if bc == "" %}
+          <p> <a href="?type={{item}}" >{{ item }}</a></p>
+		{% elif len(bc.split(",")) > 1 %}
+          <p> <a href="{{ item }}" target="_blank">{{ item }}</a></p>
+		 {% else %}
+		  <p> <a href="?type={{bc+","+item}}" >{{ item }}</a></p>
+		 {% end %}
+      {% end %}
+	  </div>
+	  </div>
+	  {% end %}
+	  <div class="footer">
+	  <p>Powered by <span>OryX</span> - Team Anghiari</p>
+	  </div>
+	</div>
+  </body>
+</html>

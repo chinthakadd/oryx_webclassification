@@ -1,0 +1,6 @@
+<oryx>
+	<classification url = "{{doc.url}}" isFound="{{doc.isFound}}">
+		<type>{{doc.classification}}</type>
+		<maintag>{{doc.maintag}}</maintag>
+	</classification>
+</oryx>

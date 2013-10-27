@@ -1,0 +1,40 @@
+<html>
+  <head>
+	<link rel="stylesheet" href="{{ static_url("main.css") }}" type="text/css"/>
+	<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+    <title>OryX Classification</title>
+  </head>
+  <body>
+  
+  <div class="mainC">
+  <div class="login">
+	<img src="{{ static_url("home_icon.png") }}" align="left"/>
+	  <p><a href="/">HOME</a></p>
+	</div>
+	<div class="header">
+		<p><span>OryX </span> Web Classification Dashboard</p>
+	</div>
+	
+	<form name="input" action="/login" method="post" id="loginform">
+	<div class="loginBox">
+		<div class="tip">
+		<p>Enter Username</p>
+		</div>
+		<input type="text" name="uname" value="{{ uname }}">
+	<div class="tip">
+		<p>Enter Password</p>
+	</div>
+		<input type="password" name="pass" value="{{ passwd }}">
+	<div class="searchBtn">
+	  <p><a href="#" onclick="document.getElementById('loginform').submit();">LOG IN</a></p>
+	</div>
+	</div>
+	
+	</form>
+	  
+	  <div class="footer">
+	  <p>Powered by <span>OryX</span> - Team Anghiari</p>
+	  </div>
+	</div>
+  </body>
+</html>
